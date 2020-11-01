@@ -23,9 +23,10 @@ On the cloud side we will set up an MQTT broker to receive the telemetry from Ed
 
 ### Tech to be used
 
-#### Cloud Gateway
+#### Cloud Gateway/Connectivity
 1. MQTT (for first POC)
 2. Azure IOT Hub
+3. COAP
 
 #### Backend and API's
 1. Node-Red (for first POC)
