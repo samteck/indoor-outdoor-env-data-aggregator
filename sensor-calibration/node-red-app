@@ -1,0 +1,193 @@
+[
+    {
+        "id": "8637c414.3a0c38",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4050fb73.392254",
+        "type": "rpi-dht22",
+        "z": "8637c414.3a0c38",
+        "name": "Outdoor DHT11",
+        "topic": "Outdoor DHT11",
+        "dht": "11",
+        "pintype": "0",
+        "pin": 4,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "c10ab737.940558",
+                "1066b32c.a81ead"
+            ]
+        ]
+    },
+    {
+        "id": "c5ea4807.543e38",
+        "type": "inject",
+        "z": "8637c414.3a0c38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "4050fb73.392254",
+                "b5d06ac1.0425e8"
+            ]
+        ]
+    },
+    {
+        "id": "1066b32c.a81ead",
+        "type": "debug",
+        "z": "8637c414.3a0c38",
+        "name": "Outdoor Temp DHT11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b5d06ac1.0425e8",
+        "type": "rpi-dht22",
+        "z": "8637c414.3a0c38",
+        "name": "Indoor DHT11",
+        "topic": "Indoor DHT11",
+        "dht": "11",
+        "pintype": "0",
+        "pin": "17",
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "ef707895.9e7698",
+                "34bade36.4b5252"
+            ]
+        ]
+    },
+    {
+        "id": "ef707895.9e7698",
+        "type": "debug",
+        "z": "8637c414.3a0c38",
+        "name": "Indoor Temp DHT11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c10ab737.940558",
+        "type": "debug",
+        "z": "8637c414.3a0c38",
+        "name": "Outdoor Humidity DHT11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "humidity",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "34bade36.4b5252",
+        "type": "debug",
+        "z": "8637c414.3a0c38",
+        "name": "Indoor Humidity DHT11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "humidity",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4ab3737e.bc0ddc",
+        "type": "serial in",
+        "z": "8637c414.3a0c38",
+        "name": "mq135",
+        "serial": "92728684.3b0148",
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "c2becd79.abff7"
+            ]
+        ]
+    },
+    {
+        "id": "c2becd79.abff7",
+        "type": "debug",
+        "z": "8637c414.3a0c38",
+        "name": "AQI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "92728684.3b0148",
+        "type": "serial-port",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "1000",
+        "bin": "false",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "20000"
+    }
+]
