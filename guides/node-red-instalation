@@ -1,0 +1,23 @@
+# Installing Node-Red on Raspberry Pi
+
+- sudo apt-get update
+- sudo apt-get dist-upgrade
+- curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+- sudo apt-get install -y nodejs
+- sudo npm install -g --unsafe-perm node-red
+
+#### Node-Red is installed and can be accessed over : http://localhost:1880
+Full Guide Here : https://iot.samteck.net/enablers/node-red/set-up-node-red-64bit-raspberry-pi-os/
+
+### Adding password authentication to node-red instance : 
+- Generate password hash : node-red admin hash-pw
+- open settings file : cd ./node-red/settings.js
+- edit the section : adminAuth
+
+
+### Installing DHT22/DHT11 node in node-red
+- sudo npm install --unsafe-perm -g node-dht-sensor
+- sudo npm install --unsafe-perm -g node-red-contrib-dht-sensor
+
+### Installing SerialPort node in Node-Red
+- sudo npm install --unsafe-perm -g node-red-node-serialport
