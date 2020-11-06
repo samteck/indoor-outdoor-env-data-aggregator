@@ -3,6 +3,8 @@ This project will aggregate various environmental values from indoor and outdoor
 
 We will be following 2 layered IOT architecture for this project in which our Edge device will be communicating directly to Cloud.
 
+<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/main/architectural-diagrams/ioeda-logical-arch.png" width="500">
+
 ## Edge Side 
 We will be having a couple of sensors interfaced with an MCU to get the data and send it to cloud via MQTT.
 
