@@ -1,0 +1,561 @@
+[
+    {
+        "id": "8a77fda7.8b037",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "92728684.3b0148",
+        "type": "serial-port",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "10000",
+        "bin": "false",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "200000"
+    },
+    {
+        "id": "1cf8aeb4.51e2e1",
+        "type": "ui_tab",
+        "name": "Samarth's Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8c7329c5.5bdac8",
+        "type": "ui_group",
+        "name": "Indoor Values",
+        "tab": "1cf8aeb4.51e2e1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "38f94698.c6d71a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#4551ed",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#4551ed",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4551ed",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#8b92f4",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4551ed",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "190b92d9.0795bd",
+        "type": "ui_group",
+        "name": "Outdoor Values",
+        "tab": "1cf8aeb4.51e2e1",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b4c9cca0.dbe08",
+        "type": "ui_tab",
+        "name": "MQ135",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "67cecd70.8add24",
+        "type": "ui_group",
+        "name": "Comparison",
+        "tab": "b4c9cca0.dbe08",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ccbe3ee5.a7f82",
+        "type": "serial-port",
+        "serialport": "dummy",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "7f272793.f1ec08",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cc1b1ad3.f33d68",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Air Quality",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3b275910.fb5496",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 920,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2e2093ff.4d2a1c",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e4a061bb.4bc56",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a6cf39fd.97eb98",
+        "type": "serial in",
+        "z": "8a77fda7.8b037",
+        "name": "mq135",
+        "serial": "92728684.3b0148",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "5d6ac32.2aac63c"
+            ]
+        ]
+    },
+    {
+        "id": "a200031a.9ddc5",
+        "type": "debug",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 190,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5d6ac32.2aac63c",
+        "type": "json",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "a200031a.9ddc5",
+                "81371d0c.f7bac",
+                "13b604bc.ea128b",
+                "21211c39.392934",
+                "98b1d8b.7401128",
+                "ea38d759.a376e8",
+                "4f753e5d.b4bc7"
+            ]
+        ]
+    },
+    {
+        "id": "f953f615.78a368",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Air Quality",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 930,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "81371d0c.f7bac",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 60,
+        "wires": [
+            [
+                "2e2093ff.4d2a1c"
+            ]
+        ]
+    },
+    {
+        "id": "21211c39.392934",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor AQI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Aqi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "f953f615.78a368"
+            ]
+        ]
+    },
+    {
+        "id": "13b604bc.ea128b",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "e4a061bb.4bc56"
+            ]
+        ]
+    },
+    {
+        "id": "98b1d8b.7401128",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 200,
+        "wires": [
+            [
+                "7f272793.f1ec08"
+            ]
+        ]
+    },
+    {
+        "id": "4f753e5d.b4bc7",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor AQI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Aqi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "cc1b1ad3.f33d68"
+            ]
+        ]
+    },
+    {
+        "id": "ea38d759.a376e8",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "3b275910.fb5496"
+            ]
+        ]
+    }
+]
