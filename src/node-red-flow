@@ -199,8 +199,8 @@
         "height": 0,
         "gtype": "gage",
         "title": "Temperature",
-        "label": "units",
-        "format": "{{value}}",
+        "label": "",
+        "format": "{{value}}°C",
         "min": 0,
         "max": "100",
         "colors": [
@@ -211,7 +211,7 @@
         "seg1": "",
         "seg2": "",
         "x": 930,
-        "y": 200,
+        "y": 260,
         "wires": []
     },
     {
@@ -225,7 +225,7 @@
         "height": 0,
         "gtype": "gage",
         "title": "Air Quality",
-        "label": "units",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
         "max": "500",
@@ -237,7 +237,7 @@
         "seg1": "",
         "seg2": "",
         "x": 930,
-        "y": 280,
+        "y": 340,
         "wires": []
     },
     {
@@ -251,8 +251,8 @@
         "height": 0,
         "gtype": "gage",
         "title": "Humidity",
-        "label": "units",
-        "format": "{{value}}",
+        "label": "",
+        "format": "{{value}}%",
         "min": 0,
         "max": "100",
         "colors": [
@@ -263,7 +263,7 @@
         "seg1": "",
         "seg2": "",
         "x": 920,
-        "y": 240,
+        "y": 300,
         "wires": []
     },
     {
@@ -277,8 +277,8 @@
         "height": 0,
         "gtype": "gage",
         "title": "Temperature",
-        "label": "units",
-        "format": "{{value}}",
+        "label": "",
+        "format": "{{value}}°C",
         "min": 0,
         "max": "100",
         "colors": [
@@ -303,8 +303,8 @@
         "height": 0,
         "gtype": "gage",
         "title": "Humidity",
-        "label": "units",
-        "format": "{{value}}",
+        "label": "",
+        "format": "{{value}}%",
         "min": 0,
         "max": "100",
         "colors": [
@@ -322,10 +322,10 @@
         "id": "a6cf39fd.97eb98",
         "type": "serial in",
         "z": "8a77fda7.8b037",
-        "name": "mq135",
+        "name": "Arduino JSON",
         "serial": "92728684.3b0148",
-        "x": 90,
-        "y": 160,
+        "x": 110,
+        "y": 220,
         "wires": [
             [
                 "5d6ac32.2aac63c"
@@ -344,8 +344,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 190,
-        "y": 240,
+        "x": 250,
+        "y": 340,
         "wires": []
     },
     {
@@ -357,7 +357,7 @@
         "action": "",
         "pretty": false,
         "x": 290,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "a200031a.9ddc5",
@@ -366,7 +366,9 @@
                 "21211c39.392934",
                 "98b1d8b.7401128",
                 "ea38d759.a376e8",
-                "4f753e5d.b4bc7"
+                "4f753e5d.b4bc7",
+                "3b048031.0a142",
+                "e35bc65b.36aa58"
             ]
         ]
     },
@@ -381,7 +383,7 @@
         "height": 0,
         "gtype": "gage",
         "title": "Air Quality",
-        "label": "units",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
         "max": "500",
@@ -497,7 +499,7 @@
         "to": "",
         "reg": false,
         "x": 680,
-        "y": 200,
+        "y": 260,
         "wires": [
             [
                 "7f272793.f1ec08"
@@ -524,7 +526,7 @@
         "to": "",
         "reg": false,
         "x": 670,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "cc1b1ad3.f33d68"
@@ -551,10 +553,116 @@
         "to": "",
         "reg": false,
         "x": 690,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "3b275910.fb5496"
+            ]
+        ]
+    },
+    {
+        "id": "da8f0a6f.9434c8",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Heat Index (Real Feel)",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 960,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3b048031.0a142",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Heat Index",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_HI",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 180,
+        "wires": [
+            [
+                "da8f0a6f.9434c8"
+            ]
+        ]
+    },
+    {
+        "id": "f5d22228.bddf5",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Heat Index (Real Feel)",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 960,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e35bc65b.36aa58",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Heat Index",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_HI",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "f5d22228.bddf5"
             ]
         ]
     }
