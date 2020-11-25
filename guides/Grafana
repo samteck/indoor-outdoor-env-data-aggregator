@@ -1,0 +1,15 @@
+https://simonhearne.com/2020/pi-influx-grafana/
+
+# Adding key and repo in raspberry PI
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+sudo apt update && sudo apt install -y grafana
+
+sudo systemctl unmask grafana-server.service
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server.service
+
+http://192.168.0.198:3000/
+username/password = admin and change after first login
+
+Configure the DataSource and start making your Dashboards

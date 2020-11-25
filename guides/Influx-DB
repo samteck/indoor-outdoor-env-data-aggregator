@@ -1,0 +1,45 @@
+https://pimylifeup.com/raspberry-pi-influxdb/
+
+# add influx DB Key and Repo
+wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+[buster] echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+
+# Install Influx DB and start on Boot
+sudo apt update
+sudo apt install influxdb
+sudo systemctl unmask influxdb
+sudo systemctl enable influxdb
+sudo systemctl start influxdb
+
+# Setup of Influx DB
+influx
+CREATE DATABASE indooroutdoordata
+SHOW DATABASES
+USE indooroutdoordata
+
+> INSERT temperature,location=indoor value=23
+> INSERT temperature,location=outdoor value=19
+> INSERT temperature,location=indoor value=22
+> INSERT temperature,location=outdoor value=18
+
+SELECT * FROM temperature
+SELECT value FROM temperature WHERE location='indoor'
+SHOW measurements
+SHOW field keys
+SHOW tag keys
+SHOW users
+
+CREATE USER samarth WITH PASSWORD '*******' WITH ALL PRIVILEGES
+exit
+
+sudo nano /etc/influxdb/influxdb.conf
+[HTTP]
+auth-enabled = true
+pprof-enabled = true
+pprof-auth-enabled = true
+ping-auth-enabled = true
+flux-enabled = true
+
+sudo systemctl restart influxdb
+
+influx -username samarth -password *******
