@@ -19,11 +19,11 @@
         "rts": "none",
         "cts": "none",
         "dsr": "none",
-        "newline": "10000",
+        "newline": "600000",
         "bin": "false",
         "out": "time",
         "addchar": "",
-        "responsetimeout": "200000"
+        "responsetimeout": "1000000"
     },
     {
         "id": "1cf8aeb4.51e2e1",
@@ -187,6 +187,20 @@
         "out": "char",
         "addchar": "",
         "responsetimeout": "10000"
+    },
+    {
+        "id": "c644e6d7.632b38",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.8-flux",
+        "url": "http://localhost:8086/",
+        "rejectUnauthorized": true
     },
     {
         "id": "7f272793.f1ec08",
@@ -368,7 +382,13 @@
                 "ea38d759.a376e8",
                 "4f753e5d.b4bc7",
                 "3b048031.0a142",
-                "e35bc65b.36aa58"
+                "e35bc65b.36aa58",
+                "e6a13238.63132",
+                "f707416f.e0aa8",
+                "7dcc637a.6fe98c",
+                "9ae5b220.c2c4e",
+                "10a261f0.06e39e",
+                "dcddc526.738718"
             ]
         ]
     },
@@ -665,5 +685,221 @@
                 "f5d22228.bddf5"
             ]
         ]
+    },
+    {
+        "id": "e6a13238.63132",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_Temp = parseFloat(msg.payload.indoor_Temp);\noutdoor_Temp = parseFloat(msg.payload.outdoor_Temp);\n\nmsg.payload = [\n    [{\n        value: indoor_Temp\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Temp\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 520,
+        "wires": [
+            [
+                "7bc4371a.1033f8"
+            ]
+        ]
+    },
+    {
+        "id": "d3bc1dac.02e4e",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8115753a.71e948",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "aqi",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3fb10058.297eb",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "dew_point",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "4ace74e2.41be3c",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "heat_index",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "7bc4371a.1033f8",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f707416f.e0aa8",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_Humidity = parseFloat(msg.payload.indoor_Humidity)\noutdoor_Humidity = parseFloat(msg.payload.outdoor_Humidity)\n\n\nmsg.payload = [\n    [{\n        value: indoor_Humidity\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Humidity\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "d3bc1dac.02e4e"
+            ]
+        ]
+    },
+    {
+        "id": "7dcc637a.6fe98c",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_Aqi = parseFloat(msg.payload.indoor_Aqi)\noutdoor_Aqi = parseFloat(msg.payload.outdoor_Aqi)\n\nmsg.payload = [\n    [{\n        value: indoor_Aqi\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Aqi\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 640,
+        "wires": [
+            [
+                "8115753a.71e948"
+            ]
+        ]
+    },
+    {
+        "id": "9ae5b220.c2c4e",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_HI = parseFloat(msg.payload.indoor_HI)\noutdoor_HI = parseFloat(msg.payload.outdoor_HI)\n\nmsg.payload = [\n    [{\n        value: indoor_HI\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_HI\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 700,
+        "wires": [
+            [
+                "4ace74e2.41be3c"
+            ]
+        ]
+    },
+    {
+        "id": "10a261f0.06e39e",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_Temp = msg.payload.indoor_Temp\nindoor_Humidity = msg.payload.indoor_Humidity\n\noutdoor_Temp = msg.payload.outdoor_Temp\noutdoor_Humidity = msg.payload.outdoor_Humidity\n\nfunction dewPoint(temp,hum){\n    tem = -1.0*temp;\n    es = 6.112*Math.exp(-1.0*17.67*tem/(243.5 - tem));\n    ed = hum/100.0*es;\n    eln = Math.log(ed/6.112);\n    td = -243.5*eln/(eln - 17.67 );\n    return td;\n}\n\nindoor_DP = parseFloat(dewPoint(indoor_Temp,indoor_Humidity))\noutdoor_DP = parseFloat(dewPoint(outdoor_Temp,outdoor_Humidity))\n\nmsg.payload = [\n    [{\n        value: indoor_DP\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_DP\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 760,
+        "wires": [
+            [
+                "3fb10058.297eb"
+            ]
+        ]
+    },
+    {
+        "id": "dcddc526.738718",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "func": "indoor_Temp = msg.payload.indoor_Temp\nindoor_Humidity = msg.payload.indoor_Humidity\n\noutdoor_Temp = msg.payload.outdoor_Temp\noutdoor_Humidity = msg.payload.outdoor_Humidity\n\nfunction vapourPressure(temp){\n    tem = -1.0*temp;\n    vp = 6.112*Math.exp(-1.0*17.67*tem/(243.5 - tem));\n    return vp;\n}\n\nindoor_VP = parseFloat(vapourPressure(indoor_Temp,indoor_Humidity))\noutdoor_VP = parseFloat(vapourPressure(outdoor_Temp,outdoor_Humidity))\n\nmsg.payload = [\n    [{\n        value: indoor_VP\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_VP\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 820,
+        "wires": [
+            [
+                "2e6e9c3d.656ca4"
+            ]
+        ]
+    },
+    {
+        "id": "2e6e9c3d.656ca4",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "vapour_pressure",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 890,
+        "y": 820,
+        "wires": []
     }
 ]
