@@ -19,9 +19,9 @@
         "rts": "none",
         "cts": "none",
         "dsr": "none",
-        "newline": "600000",
+        "newline": "\\n",
         "bin": "false",
-        "out": "time",
+        "out": "char",
         "addchar": "",
         "responsetimeout": "1000000"
     },
