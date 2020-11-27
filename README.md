@@ -1,6 +1,7 @@
 # indoor-outdoor-env-data-aggregator
 
 The main goal of this project is to aggregate various environmental values from the indoor and outdoor of the house using various sensors for a certain time and store them in the cloud. In North India, pollution rapidly increases during certain months of the year and has a major impact on the lives of the people.
+
 We will be aggregating the sensor data for over a year and will run various inferences to find out how much difference is there between the indoor and outdoor air. The data will also be exposed via APIs for 3rd parties to consume.
 
 My vision for the project is to aggregate reliable data and run various ML algorithms to predict the environmental conditions inside the house as compared to outside and whether it is safe to go outside the home.
@@ -9,8 +10,7 @@ My vision for the project is to aggregate reliable data and run various ML algor
 
 We will be following 2 layered IOT architecture for this project in which our Edge device will be communicating directly to Cloud.
 
-<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/main/architectural-diagrams/ioeda-logical-arch.png" width="800">
-
+<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/main/architectural-diagrams/ioeda-logical-arch.png" width="700">
 ## Edge Side 
 We will be having a couple of sensors interfaced with an MCU to get the data and send it to the cloud via MQTT.
 
