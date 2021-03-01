@@ -29,9 +29,6 @@ SHOW field keys
 SHOW tag keys
 SHOW users
 
-CREATE USER samarth WITH PASSWORD '*******' WITH ALL PRIVILEGES
-exit
-
 sudo nano /etc/influxdb/influxdb.conf
 [HTTP]
 auth-enabled = true
@@ -43,3 +40,5 @@ flux-enabled = true
 sudo systemctl restart influxdb
 
 influx -username samarth -password *******
+CREATE USER samarth WITH PASSWORD '*******' WITH ALL PRIVILEGES
+exit
