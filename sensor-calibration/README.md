@@ -1,6 +1,14 @@
 ### We need to make sure that our sensors are working fine and showing correct values.
 For that we will make a sample node-red application in Raspberry Pi and save the data from sensors.
 
+                            +----------------+
+MQ135 -----> Arduino -----> |                |
+                            |  Raspberry Pi  | --------> Node-Red App
+        DHT-11 -----------> |                |
+                            +----------------+
+
+Since MQ135 only sends Analog values and we can not read Analog values in Raspberry pi, therefore an Arduino was used as ADC converter.
+
 ## Steps:
 1. Install Node-Red on raspberry pi
 2. Node-Red is installed and can be accessed over : http://localhost:1880
