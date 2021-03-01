@@ -2,11 +2,9 @@
 
 For that we will make a sample node-red application in Raspberry Pi and save the data from sensors.
 
-                            +----------------+
-MQ135 -----> Arduino -----> |                |
-                            |  Raspberry Pi  | --------> Node-Red App
-        DHT-11 -----------> |                |
-                            +----------------+
+MQ135 -----> Arduino -----> |  Raspberry Pi  |
+
+DHT-11 -------------------------> |  Raspberry Pi  |
 
 Since MQ135 only sends Analog values and we can not read Analog values in Raspberry pi, therefore an Arduino was used as ADC converter.
 
