@@ -6,7 +6,7 @@ On Raspberry Pi we have a Node-Red instance running along with Dashboard(UI) cap
 <img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/sensor-ardunio-RPi-UI/architectural-diagrams/Sensor-Arduino-RPi-UI.png" width="800">
 
 ## InfluxDB
-Steps to setup, secure, and configure in Guides Folder. 
+Steps to setup, secure, and configure in Guides Folder.\
 We will be creating 6 measurements (temp, humidity, aqi, heat index, dew point and vapour pressure) for each of the environmental parameter and 1 tag: location (indoor/outdoor) and 1 field : value (actual value)
 
 Measurements = Tables\
@@ -15,7 +15,7 @@ Primary Key  = Timestamp\
 Note : tags are optional but helps in better segregation.
 
 ## Grafana
-Steps to setup and configure in Guides Folder and JSON Dashboard in the src folder
+Steps to setup and configure in Guides Folder and JSON Dashboard in the src folder\
 We will display Gauge and Historical Graphs for the 3 values we are getting from the sensors(Temperature, Humidity, and AQI), and for 3 calculated values(Heat Index/Real Feels, Dew Point, and Vapour Pressure) we will be showing only the values.
 
 Note: For Node-Red setup go to guides
@@ -27,7 +27,9 @@ Note: For Node-Red setup go to guides
 4. Added Dew Point and Vapour Pressure calculation on Node-Red
 
 ### An image of the setup 
-Here 1 sensor module is ready and experimentation going on with second sensor module (testing if sensor values are similar).
+Here, 1 sensor module is ready and experimentation is going on with second sensor module (testing if values from sensors are similar).
 See sensor-calibration folder
 
 <img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/sensor-ardunio-RPi-UI/Images/sensor-system-interfacing.JPG" width="800">
+
+Video of the Setup : https://www.youtube.com/watch?v=35UjRXJEqd4
