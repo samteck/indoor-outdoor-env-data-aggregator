@@ -9,10 +9,10 @@ On Raspberry Pi we have a Node-Red instance running along with Dashboard(UI) cap
 Steps to setup, secure, and configure in Guides Folder. 
 We will be creating 6 measurements (temp, humidity, aqi, heat index, dew point and vapour pressure) for each of the environmental parameter and 1 tag: location (indoor/outdoor) and 1 field : value (actual value)
 
-Measurements = Tables
-Fields       = Columns (Value)
-Primary Key  = Timestamp
-tags are optional but helps in better segregation.
+Measurements = Tables\
+Fields       = Columns (Value)\
+Primary Key  = Timestamp\
+Note : tags are optional but helps in better segregation.
 
 ## Grafana
 Steps to setup and configure in Guides Folder and JSON Dashboard in the src folder
@@ -30,4 +30,4 @@ Note: For Node-Red setup go to guides
 Here 1 sensor module is ready and experimentation going on with second sensor module (testing if sensor values are similar).
 See sensor-calibration folder
 
-<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/sensor-ardunio-RPi-UI/Images/IMG_4770.JPG" width="800">
+<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/sensor-ardunio-RPi-UI/Images/sensor-system-interfacing.JPG" width="800">
