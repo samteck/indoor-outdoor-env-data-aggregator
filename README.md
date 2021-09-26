@@ -1,11 +1,11 @@
 # indoor-outdoor-env-data-aggregator
 
-In many cities of the world, the indoor and outdoor environment varies to a great extent because of natural or man-made causes like California wildfires, pollution in cities like New Delhi & Beijing, cities near to an active volcano.\
+In many cities of the world, the indoor and outdoor environment varies to a great extent because of natural or man-made causes like; California wildfires, pollution in cities like New Delhi & Beijing, cities near to an active volcano.\
 The main goal of this project is to aggregate various environmental values from the indoor and outdoor of the house/facility using various sensors for a certain time and store them in the Cloud for Visualization and further processing.
 
-## Problem it will Solve
+## The Problem it will Solve
 
-Most of the time in a city we have AQI and Temp sensors just for a specific location, but here we will have local monitoring of the environment using an indoor and outdoor set of sensors (DHT11 for temp and humidity and MQ135 for AQI). We can calculate how much difference is between the gathered values to get an estimation of outside conditions.\
+Most of the time in a city we have AQI and Temp sensors just for a specific location, but here we will have local monitoring of the environment using an indoor and outdoor set of sensors (DHT11 for temp and humidity and MQ135 for AQI). We can calculate how much difference is between the gathered sensor values to get an estimation of outside weather conditions.\
 The user can be notified if the weather outside is better or worse as compared to other days.\
 Plus the data gathered is exclusive to your location and can be used in cities or rural remote areas.\
 Plus we can store the telemetry in the cloud for further analysis.
@@ -43,7 +43,7 @@ Important Features
 
 ## Edge Side 
 
-We will be having a sensor system interfaced with an MCU to get the data and send it to the cloud via MQTT.
+We have two sensor systems (outdoor/indoor) interfaced with an MCU (ESP32) to get the data and send it to the cloud via MQTT.
 
 <p align="center">
 <img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/main/Images/edge-system.jpeg" width="500">
@@ -57,9 +57,9 @@ We will be having a sensor system interfaced with an MCU to get the data and sen
 
 On the cloud side, we will set up an MQTT broker to receive the telemetry from the Edge device and store it into any time-series database. Then we can expose some API's so that the data can be accessed over the web.
 
+We will also host a data visualization app using Grafana which will help us to view local and historical data.
 
-### Initial Prototyped Branch: https://github.com/samteck/indoor-outdoor-env-data-aggregator/tree/sensor-ardunio-RPi-UI
-### Video of the setup : https://www.youtube.com/watch?v=35UjRXJEqd4
+<img src="https://github.com/samteck/indoor-outdoor-env-data-aggregator/blob/main/Images/grafana-visualization.png">
 
 ---
 
@@ -92,5 +92,8 @@ On the cloud side, we will set up an MQTT broker to receive the telemetry from t
 
 1. Grafana
 2. Node-Red Dashboard
+
+### Initial Prototyped Branch: https://github.com/samteck/indoor-outdoor-env-data-aggregator/tree/sensor-ardunio-RPi-UI
+### Video of the setup : https://www.youtube.com/watch?v=35UjRXJEqd4
 
 Note: The AQI values from MQ135 do not correspond to the PPM values.
