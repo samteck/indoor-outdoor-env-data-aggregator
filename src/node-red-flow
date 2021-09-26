@@ -1,0 +1,1034 @@
+[
+    {
+        "id": "8a77fda7.8b037",
+        "type": "tab",
+        "label": "indoor-outdoor",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7f272793.f1ec08",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 890,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "cc1b1ad3.f33d68",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Air Quality",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 890,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3b275910.fb5496",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2e2093ff.4d2a1c",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 890,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e4a061bb.4bc56",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a200031a.9ddc5",
+        "type": "debug",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5d6ac32.2aac63c",
+        "type": "json",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "a200031a.9ddc5",
+                "81371d0c.f7bac",
+                "13b604bc.ea128b",
+                "21211c39.392934",
+                "98b1d8b.7401128",
+                "ea38d759.a376e8",
+                "4f753e5d.b4bc7",
+                "3b048031.0a142",
+                "e35bc65b.36aa58",
+                "e6a13238.63132",
+                "f707416f.e0aa8",
+                "7dcc637a.6fe98c",
+                "9ae5b220.c2c4e",
+                "10a261f0.06e39e",
+                "dcddc526.738718"
+            ]
+        ]
+    },
+    {
+        "id": "f953f615.78a368",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Air Quality",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 890,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "81371d0c.f7bac",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "2e2093ff.4d2a1c"
+            ]
+        ]
+    },
+    {
+        "id": "21211c39.392934",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor AQI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Aqi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "f953f615.78a368"
+            ]
+        ]
+    },
+    {
+        "id": "13b604bc.ea128b",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_Humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "e4a061bb.4bc56"
+            ]
+        ]
+    },
+    {
+        "id": "98b1d8b.7401128",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "7f272793.f1ec08"
+            ]
+        ]
+    },
+    {
+        "id": "4f753e5d.b4bc7",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor AQI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Aqi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "cc1b1ad3.f33d68"
+            ]
+        ]
+    },
+    {
+        "id": "ea38d759.a376e8",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_Humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "3b275910.fb5496"
+            ]
+        ]
+    },
+    {
+        "id": "da8f0a6f.9434c8",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "8c7329c5.5bdac8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Heat Index (Real Feel)",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 920,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3b048031.0a142",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Indoor Heat Index",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.indoor_HI",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "da8f0a6f.9434c8"
+            ]
+        ]
+    },
+    {
+        "id": "f5d22228.bddf5",
+        "type": "ui_gauge",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "group": "190b92d9.0795bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Heat Index (Real Feel)",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 920,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "e35bc65b.36aa58",
+        "type": "change",
+        "z": "8a77fda7.8b037",
+        "name": "Outdoor Heat Index",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.outdoor_HI",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "f5d22228.bddf5"
+            ]
+        ]
+    },
+    {
+        "id": "6500218d.4ed18",
+        "type": "mqtt in",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "topic": "ioeda/device1/values",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6de81218.a9e92c",
+        "nl": false,
+        "rap": false,
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "de67778.f8a5088",
+                "5d6ac32.2aac63c",
+                "a8ee6d56.488ec",
+                "ca93fe5e.26958",
+                "21aca0c4.85942"
+            ]
+        ]
+    },
+    {
+        "id": "de67778.f8a5088",
+        "type": "debug",
+        "z": "8a77fda7.8b037",
+        "name": "from esp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e6a13238.63132",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Temperature",
+        "func": "indoor_Temp = parseFloat(msg.payload.indoor_Temp);\noutdoor_Temp = parseFloat(msg.payload.outdoor_Temp);\n\nmsg.payload = [\n    [{\n        value: indoor_Temp\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Temp\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "7bc4371a.1033f8"
+            ]
+        ]
+    },
+    {
+        "id": "d3bc1dac.02e4e",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "8115753a.71e948",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "aqi",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "3fb10058.297eb",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "dew_point",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4ace74e2.41be3c",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "heat_index",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7bc4371a.1033f8",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f707416f.e0aa8",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Humidity",
+        "func": "indoor_Humidity = parseFloat(msg.payload.indoor_Humidity)\noutdoor_Humidity = parseFloat(msg.payload.outdoor_Humidity)\n\n\nmsg.payload = [\n    [{\n        value: indoor_Humidity\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Humidity\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 800,
+        "wires": [
+            [
+                "d3bc1dac.02e4e"
+            ]
+        ]
+    },
+    {
+        "id": "7dcc637a.6fe98c",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "AQI",
+        "func": "indoor_Aqi = parseFloat(msg.payload.indoor_Aqi)\noutdoor_Aqi = parseFloat(msg.payload.outdoor_Aqi)\n\nmsg.payload = [\n    [{\n        value: indoor_Aqi\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_Aqi\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "8115753a.71e948"
+            ]
+        ]
+    },
+    {
+        "id": "9ae5b220.c2c4e",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Heat Index",
+        "func": "indoor_HI = parseFloat(msg.payload.indoor_HI)\noutdoor_HI = parseFloat(msg.payload.outdoor_HI)\n\nmsg.payload = [\n    [{\n        value: indoor_HI\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_HI\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 920,
+        "wires": [
+            [
+                "4ace74e2.41be3c"
+            ]
+        ]
+    },
+    {
+        "id": "10a261f0.06e39e",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Dew Point",
+        "func": "indoor_Temp = msg.payload.indoor_Temp\nindoor_Humidity = msg.payload.indoor_Humidity\n\noutdoor_Temp = msg.payload.outdoor_Temp\noutdoor_Humidity = msg.payload.outdoor_Humidity\n\nfunction dewPoint(temp,hum){\n    tem = -1.0*temp;\n    es = 6.112*Math.exp(-1.0*17.67*tem/(243.5 - tem));\n    ed = hum/100.0*es;\n    eln = Math.log(ed/6.112);\n    td = -243.5*eln/(eln - 17.67 );\n    return td;\n}\n\nindoor_DP = parseFloat(dewPoint(indoor_Temp,indoor_Humidity))\noutdoor_DP = parseFloat(dewPoint(outdoor_Temp,outdoor_Humidity))\n\nmsg.payload = [\n    [{\n        value: indoor_DP\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_DP\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "3fb10058.297eb"
+            ]
+        ]
+    },
+    {
+        "id": "dcddc526.738718",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Vapor Pressure",
+        "func": "indoor_Temp = msg.payload.indoor_Temp\nindoor_Humidity = msg.payload.indoor_Humidity\n\noutdoor_Temp = msg.payload.outdoor_Temp\noutdoor_Humidity = msg.payload.outdoor_Humidity\n\nfunction vapourPressure(temp){\n    tem = -1.0*temp;\n    vp = 6.112*Math.exp(-1.0*17.67*tem/(243.5 - tem));\n    return vp;\n}\n\nindoor_VP = parseFloat(vapourPressure(indoor_Temp,indoor_Humidity))\noutdoor_VP = parseFloat(vapourPressure(outdoor_Temp,outdoor_Humidity))\n\nmsg.payload = [\n    [{\n        value: indoor_VP\n    },\n    {\n        location:\"indoor\"\n    }],\n    [{\n        value: outdoor_VP\n    },\n    {\n        location:\"outdoor\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 1040,
+        "wires": [
+            [
+                "2e6e9c3d.656ca4"
+            ]
+        ]
+    },
+    {
+        "id": "2e6e9c3d.656ca4",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "vapour_pressure",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 870,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "ca93fe5e.26958",
+        "type": "http request",
+        "z": "8a77fda7.8b037",
+        "name": "Waqi.info",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.waqi.info/feed/gurgaon/?token=8f6190751b508a632798a9a77d19d299e2160c95",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 460,
+        "y": 40,
+        "wires": [
+            [
+                "7143f1f1.9bb84"
+            ]
+        ]
+    },
+    {
+        "id": "753b99b1.a104c8",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "aqi",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7143f1f1.9bb84",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "AQI",
+        "func": "actual_Aqi = parseFloat(msg.payload.data.aqi)\n\nmsg.payload = [\n    [{\n        value: actual_Aqi\n    },\n    {\n        location:\"actual\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 40,
+        "wires": [
+            [
+                "753b99b1.a104c8"
+            ]
+        ]
+    },
+    {
+        "id": "a8ee6d56.488ec",
+        "type": "http request",
+        "z": "8a77fda7.8b037",
+        "name": "Open Weather Map",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.openweathermap.org/data/2.5/weather?lat=28.46&lon=77.03&appid=8f3b237195274ea8632973e5031653fb&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "a8ded7b2.7f45e8",
+                "24030a49.1aed26"
+            ]
+        ]
+    },
+    {
+        "id": "c6a02d52.1db01",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "24030a49.1aed26",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Humidity",
+        "func": "actual_Humidity = parseFloat(msg.payload.main.humidity)\n\nmsg.payload = [\n    [{\n        value: actual_Humidity\n    },\n    {\n        location:\"actual\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "c6a02d52.1db01"
+            ]
+        ]
+    },
+    {
+        "id": "55c9f76f.7f7858",
+        "type": "influxdb out",
+        "z": "8a77fda7.8b037",
+        "influxdb": "c644e6d7.632b38",
+        "name": "DB",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "indooroutdoorenvdata",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a8ded7b2.7f45e8",
+        "type": "function",
+        "z": "8a77fda7.8b037",
+        "name": "Temp",
+        "func": "actual_Temp = parseFloat(msg.payload.main.temp)\n\nmsg.payload = [\n    [{\n        value: actual_Temp\n    },\n    {\n        location:\"actual\"\n    }]\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 100,
+        "wires": [
+            [
+                "55c9f76f.7f7858"
+            ]
+        ]
+    },
+    {
+        "id": "7617d4fa.1e530c",
+        "type": "mqtt in",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "topic": "ioeda/device1/activation",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6de81218.a9e92c",
+        "nl": false,
+        "rap": false,
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "4e728de8.8357f4"
+            ]
+        ]
+    },
+    {
+        "id": "4e728de8.8357f4",
+        "type": "debug",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "21aca0c4.85942",
+        "type": "mqtt out",
+        "z": "8a77fda7.8b037",
+        "name": "",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "50c026d1.08ff38",
+        "x": 900,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "190b92d9.0795bd",
+        "type": "ui_group",
+        "name": "Outdoor Values",
+        "tab": "1cf8aeb4.51e2e1",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8c7329c5.5bdac8",
+        "type": "ui_group",
+        "name": "Indoor Values",
+        "tab": "1cf8aeb4.51e2e1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6de81218.a9e92c",
+        "type": "mqtt-broker",
+        "name": "Samarth2",
+        "broker": "152.67.7.97",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c644e6d7.632b38",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.8-flux",
+        "url": "http://localhost:8086/",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "50c026d1.08ff38",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "demo.thingsboard.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1cf8aeb4.51e2e1",
+        "type": "ui_tab",
+        "name": "Samarth's Home",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
